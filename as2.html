@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="left">
+            
+            <div id="scene">
+
+                <img src="rocket.png" alt="Logo" class="pic"><br>
+            </div>
+            <div id="text"><p>Welcome</p></div>
+            <div class="text">You are 30 seconds away</div>
+            <div class="text"><p>from earning your own</p></div>
+            <div class="text"><p>money!</p></div>
+            <button id="log" type="submit">Login</button>
+            
+        </div>
+        
+        
+        <div id="mid">
+            <div id="test"></div>
+            <div id="right">
+                <div id="select">
+                    <label class="switch">
+  <input type="checkbox" id="slide">
+  <span class="slider round">
+      <label for="slide" class="opt">&nbsp;Employee&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <label for="slide" class="opt">Hirer</label>
+  </span>
+</label>
+                </div>
+                <div id="topic"><h1>Apply as a Employee</h1></div>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <input type="text" class="form" placeholder="First Name*">
+                    </div>
+                    <div class="grid-item">
+                        <input type="email" class="form" placeholder="Your Email*">
+                    </div>
+                    <div class="grid-item">
+                        <input type="text" class="form" placeholder="Last Name*">
+
+                    </div>
+                    <div class="grid-item">
+                            <input type="tel" id="phone" class="form" name="phone" placeholder="Your Phone*" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"> 
+
+                        </div>
+                    <div class="grid-item">
+                        <input type="password" class="form" placeholder="password*">
+
+
+                    </div>
+                    <div class="grid-item" id="form">
+                        <!-- <input type="text" class="form" placeholder="Your Phone*"> -->
+                        <select name="questions" class="form" required>
+                            <option value="" disabled selected hidden>Choose Your Security Question</option>
+                              <option value="favourite place">favourite place?</option>
+                              <option value="place you live?">place you live?</option>
+                              <option value="school">school?</option>
+                              <option value="collage">collage?</option>
+                        </select>
+            
+
+                    </div>
+                    <div class="grid-item">
+                        <input type="password" class="form" placeholder="Confirm Password*">
+
+                    </div>
+                    <div class="grid-item">
+                        <input type="text" class="form" placeholder="Enter Your Answer*">
+
+                    </div>
+    
+                  </div>
+                  <div class="grid-item">
+                      <p>
+                          <input type="radio"  name="gender" value="Male" id="male" />
+                          <label for="male" >Male</label>
+                          <input type="radio"  name="gender" value="Female" id="female"/>
+                          <label for="female">Female</label>
+                          <!-- <a href="tel:5558920234" onclick="ga('send', 'event', { eventCategory: 'Contact',
+                           eventAction: 'Call', eventLabel: 'Mobile Button'});"><p class="call
+                           -button">Click to Call</p></a> -->
+                        </p>
+                    </div>
+                      
+
+                  <button type="submit" id="submit">Register</button>
+                </div>
+        </div>
+        
+
+    </div>
+
+
+
+                <style>
+                    #scene{
+                        position: relative;
+                        width: 100%;
+                        /* height: 100vh; */
+                        /* background: #000; */
+                        overflow: hidden;
+                        display: flex;
+                        justify-self: start;
+                    }
+                    #scene .pic{
+                        position: relative;
+                        animation: animate .25s ease infinite;;
+                    }
+                    @keyframes animate{
+                        0%,100%{
+                            transform: translateY(-2px);
+
+                        }
+                        50%{
+                            transform: translateY(4px);
+                        }
+                    }
+                    #scene .pic::before{content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 10px;
+                    height: 200px;
+                    background: linear-gradient(#d6453b,transparent);
+
+                    }
+                    #scene .pic::after{content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 10px;
+                    height: 200px;
+                    background: linear-gradient(#00d0ff,transparent);
+                    filter: blur(20px);
+
+                    }
+
+
+
+					select:invalid { color: gray; }
+
+                    #log{
+                        float: right;
+                        height: 45px;
+                        width: 170px;
+                        /* background-color: #fff; */
+                        border-radius: 25px;
+                        font-size: 21px;
+                        color: rgb(55, 55, 214);
+                        margin: 70px 90px ;
+                    }
+            
+                  
+                    #text{
+                        padding-top: 0px;
+                        color: #fff;
+                        font-size: 22pt;
+                        text-align: center;
+            
+                    }
+                    .text{
+                        color: #fff;
+                        font-size: 11pt;
+                        text-align: center;
+                        line-height: 11px;
+                    }
+                     .pic{
+                    height: 90px;
+                    width: 65px;
+                    align-items: center;
+                    float: left;
+                    padding-left: 143px;
+                    padding-top: 175px;
+                }
+                .switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 33px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #423fe7;
+  -webkit-transition: .4s;
+  transition: .4s;
+  padding-top: 7px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 31px;
+  width: 100px;
+  /* position: absolute; */
+  left: 4px;
+  bottom: 4px;
+  top: 4px;
+  background-color: #E6E6FA;
+  -webkit-transition: .4s;
+  transition: .4s;
+  /* contain:"--->"; */
+  /* contain: ""; */
+  z-index: 1;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(110px);
+  -ms-transform: translateX(110px);
+  transform: translateX(100px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 33px;
+height: 32px;
+width: 208px;
+/* border-bottom-left-radius: 50px; */
+/* border-bottom-right-radius: 40px; */
+
+
+}
+
+.slider.round:before {
+  border-radius: 30%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+
+
+  /* padding-bottom: 5px;
+   */
+   /* margin-top: 55px; */
+}
+.opt{
+    font-size: 13pt;
+    padding-left: 10px;
+    text-decoration: aliceblue;
+    padding-top: 100px;
+    position: relative;
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* margin-top: 50px; */
+    top: 02px;
+    z-index: 3;
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+
+label .opt{ 
+    /* color:#fff;  */
+}
+        #submit{
+            float: right;
+            height: 50px;
+            width: 170px;
+            background-color: #423fe7;
+            border-radius: 25px;
+            font-size: 18px;
+            margin-right: 81px;
+            margin-top: 15px;
+        }
+        #select{
+            height: 55px;
+            border-top: #E6E6FA solid 30px;
+            /* margin-top: 15px; */
+            float: right;
+            padding-right: 150px;
+        }
+        .form{
+            height: 100%;
+            width: 100%;
+    border: solid black 3px;
+    border-radius: 5px;
+    background:#e9e9ed;
+    font-size: 10pt;
+
+        }
+        #form{
+    font-size: 10pt;
+
+            height: 100%;
+            width: 341px;
+            
+            
+    /* border: solid black 3px; */
+    border-radius: 5px;
+
+        }
+        #form option{
+            color: #fff;
+            background: #fff;
+        }
+        
+         .grid-container {
+  display: grid;
+  /* grid-gap: 15px; */
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  font-size: 13px;
+
+  /* height: 450px; */
+  width: 80%;
+
+  /* background-color: #2196F3; */
+  padding-top: 40px;
+  padding-left:30px;
+}
+
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  height: 41px;
+  width: 330px;
+  padding-top: 7px;
+
+  font-size: 20px;
+  text-align: center;
+  border-radius: 9px;
+}
+.grid-item ::placeholder{
+    /* padding-left: 20px; */
+    margin-left: 10px;
+
+}
+#topic{
+    font-family: Times New Roman;
+    padding-top: 100px;
+    padding-left: 10px;
+    text-align: center;
+    line-height: 1px;
+    font-size: 14pt;
+
+
+}
+                    
+            
+                    #main{
+                        height: 700px;
+                        width: 1338px;
+                        /* background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); */
+                        /* background-color: #009ffd ; */
+            /* background-image: linear-gradient(215deg,#009ffd  0%, #2a2a72 64%); */
+            background-color: #2a2a72;
+            background-image: linear-gradient(105deg, #2a2a72 24%, #009ffd 74%);
+            
+            
+                        }
+                        #test{
+                            height: 607px;
+                            width: 12%;
+                            background-color: #E6E6FA;
+                            
+                            border-radius: 99%;
+                            float: left;
+                            margin-top: 02px;
+                        }
+                        #left{
+                            width: 26%;
+                            height: 100%;
+                            float: left;
+                        }
+                        #mid{
+                            height: 87%;
+                            margin-top: 47px;
+                            margin-bottom: 47px;
+                            float: left;
+                            width: 74%;
+                        }
+                        #right{
+                            /* float: left; */
+                            background-color: #E6E6FA;
+                            height: 100%;
+                            width: 93%;
+                            margin-left: 40px;
+                            border-top-left-radius: 26px;
+                            border-bottom-left-radius: 26px;
+
+
+
+                        }
+                            
+                       
+                </style>
+
+
+
+            </body>
+            </html>                
